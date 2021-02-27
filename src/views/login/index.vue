@@ -72,8 +72,10 @@
       </div>
     </van-form>
 
-    <!-- 条款 -->
-    <p class="clause">隐私条款</p>
+    <!-- 说明 -->
+    <p class="describe">任何手机号都可以登录</p>
+    <p class="describe">接收验证码时间可能会较长</p>
+    <p class="describe">可以使用万能验证码 246810</p>
   </div>
 </template>
 
@@ -220,13 +222,9 @@ export default {
   }
 }
 // 条款
-.clause {
-  position: fixed;
-  right: 0px;
-  left: 0px;
-  bottom: 27px;
+.describe {
   text-align: center;
-  color: #949596;
-  font-size: 12px;
+  font-size: 15px;
+  color: #666666;
 }
 </style>

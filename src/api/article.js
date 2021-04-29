@@ -58,7 +58,3 @@ export const cancelLikingsArticle = articleId => {
     url: `/app/v1_0/article/likings/${articleId}`
   })
 }
-
-// Query 参数使用 params 设置
-// Headers 参数使用 headers 设置
-// Body 参数使用 data 设置

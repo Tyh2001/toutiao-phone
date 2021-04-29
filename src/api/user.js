@@ -28,9 +28,6 @@ export const getUserInfo = () => {
   return request({
     method: 'GET',
     url: '/app/v1_0/user'
-    // headers: {
-    //   Authorization: `Bearer ${store.state.user.token}`
-    // }
   })
 }
 
@@ -88,8 +85,3 @@ export const changeUserPhoto = data => {
     data
   })
 }
-
-// body 参数使用 data 设置
-// Query 参数使用 params 设置
-// Headers 参数使用 headers 设置
-// Body 参数使用 data 设置

@@ -4,7 +4,7 @@
 
 /**
  * 获取本地存储
- * @param {} name 存储数据的名称
+ * @param {String} name 存储数据的名称
  */
 export const getItem = name => {
   const data = window.localStorage.getItem(name)
@@ -19,8 +19,8 @@ export const getItem = name => {
 
 /**
  * 设置本地存储
- * @param {} name 存储数据的名称
- * @param {} value 存储数据的值
+ * @param {String} name 存储数据的名称
+ * @param {Object} value 存储数据的值
  */
 export const setItem = (name, value) => {
   // 如果 value 是 JSON 格式字符串 就要转换为 JSON 字符串再存储
@@ -32,7 +32,7 @@ export const setItem = (name, value) => {
 
 /**
  * 删除本地存储
- * @param {} name 要删除的数据的名称
+ * @param {String} name 要删除的数据的名称
  */
 export const removeItem = name => {
   window.localStorage.removeItem(name)

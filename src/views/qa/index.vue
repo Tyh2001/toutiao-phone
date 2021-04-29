@@ -3,7 +3,7 @@
     <van-nav-bar
       title="问答"
     />
-    <div>问答 - 开发中</div>
+    <div>问答页面 暂未开发</div>
   </div>
 </template>
 

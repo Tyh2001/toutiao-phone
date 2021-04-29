@@ -3,7 +3,7 @@
     <van-nav-bar
       title="视频"
     />
-    <div>视频 - 开发中</div>
+    <div>视频页面 暂未开发</div>
   </div>
 </template>
 

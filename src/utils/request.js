@@ -18,15 +18,9 @@ const request = axios.create({
   baseURL: 'http://ttapi.research.itcast.cn/',
   // 解决安全整数范围
   transformResponse: [function (data) {
-    // 后端返回的可能不是 JSON 格式字符串
-    // 如果不是的话 那么 JSONbig.parse 调用会报错
-    // 所以使用 try catch 来捕获异常 处理异常发生
     try {
-      // 如果转换成功 则直接把结果返回
       return JSONbig.parse(data)
     } catch (err) {
-      // 如果转换失败 则进入这里
-      // 我们直接把数据原封不动的返回给请求使用
       return data
     }
   }]
@@ -34,14 +28,9 @@ const request = axios.create({
 
 // 请求拦截器
 request.interceptors.request.use(function (config) {
-  // console.log(config)
   if (store.state.user) {
     config.headers.Authorization = `Bearer ${store.state.user.token}`
   }
-  // const { user } = store.state
-  // if (user) {
-  //   config.headers.Authorization = `Bearer ${user.token}`
-  // }
   return config
 }, function (error) {
   return Promise.reject(error)

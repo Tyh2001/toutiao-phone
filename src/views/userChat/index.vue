@@ -2,34 +2,20 @@
   <div id="userChat">
     <!-- 小智同学页面 -->
     <!-- 顶部导航栏 -->
-    <van-nav-bar
-      title="小智同学"
-      left-arrow
-      @click-left="$router.back()"
-    />
+    <van-nav-bar title="小智同学" left-arrow @click-left="$router.back()" />
 
     <!-- 中间的聊天内容 -->
     <van-cell-group class="vanCellGroup">
       <!-- 聊天内容遍历 -->
-      <van-cell
-        v-for="(msg, index) in messages"
-        :key="index"
-        :value="msg"
-      />
+      <van-cell v-for="(msg, index) in messages" :key="index" :value="msg" />
     </van-cell-group>
 
     <!-- 下方文本框 -->
-    <van-field
-      v-model="text"
-      center
-      clearable
-    >
+    <van-field v-model="text" center clearable>
       <template #button>
-        <van-button
-          size="small"
-          type="primary"
-          @click="onSend"
-        >发送</van-button>
+        <van-button size="small" type="primary" @click="onSend"
+          >发送</van-button
+        >
       </template>
     </van-field>
   </div>

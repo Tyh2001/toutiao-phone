@@ -4,12 +4,7 @@
     <!-- 用户头像 -->
     <div class="userPhotoBox">
       <!-- 用户头像 -->
-      <van-image
-        round
-        class="userPhoto"
-        slot="icon"
-        :src="comment.aut_photo"
-      />
+      <van-image round class="userPhoto" slot="icon" :src="comment.aut_photo" />
     </div>
 
     <!-- 评论内容信息 -->
@@ -23,7 +18,9 @@
 
         <div class="TimeBtn">
           <!-- 评论时间 -->
-          <span class="time">{{ comment.pubdate | dataTime('MM-DD HH:mm') }}</span>
+          <span class="time">{{
+            comment.pubdate | dataTime("MM-DD HH:mm")
+          }}</span>
 
           <!-- 回复按钮 -->
           <van-button

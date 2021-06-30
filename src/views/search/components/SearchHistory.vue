@@ -9,11 +9,7 @@
         <span @click="isdeleteShow = false">完成</span>
       </div>
       <!-- 删除按钮 -->
-      <van-icon
-        v-else
-        name="delete-o"
-        @click="isdeleteShow = true"
-      />
+      <van-icon v-else name="delete-o" @click="isdeleteShow = true" />
     </van-cell>
     <!-- 内容单元格 -->
     <van-cell
@@ -23,10 +19,7 @@
       @click="onDelet(index, searchHistorie)"
     >
       <!-- 删除按钮 -->
-      <van-icon
-        name="close"
-        v-show="isdeleteShow"
-      />
+      <van-icon name="close" v-show="isdeleteShow" />
     </van-cell>
   </div>
 </template>

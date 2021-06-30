@@ -14,10 +14,7 @@
     </div>
 
     <!-- tab 标签 文章频道列表 -->
-    <van-tabs
-      v-model="active"
-      title-active-color="#333333"
-    >
+    <van-tabs v-model="active" title-active-color="#333333">
       <!-- 汉堡按钮 -->
       <van-icon
         class="hamburgerBtn"

@@ -1,11 +1,7 @@
 <template>
   <div class="loginIndex">
     <!-- 导航菜单 -->
-    <van-nav-bar
-      title="登录"
-      left-arrow
-      @click-left="$router.back()"
-    />
+    <van-nav-bar title="登录" left-arrow @click-left="$router.back()" />
 
     <!-- 表单 -->
     <!--
@@ -61,7 +57,8 @@
             round
             center
             @click.prevent="onSendSms"
-          >获取验证码</van-button>
+            >获取验证码</van-button
+          >
         </template>
       </van-field>
 

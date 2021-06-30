@@ -6,22 +6,19 @@
         <van-cell center>
           <!-- 头像 -->
           <div slot="icon">
-             <van-image
-                width="50"
-                height="50"
-                round
-                fit="cover"
-                class="userImg"
-                :src="userInfo.photo"
-              />
+            <van-image
+              width="50"
+              height="50"
+              round
+              fit="cover"
+              class="userImg"
+              :src="userInfo.photo"
+            />
           </div>
           <div slot="title" class="userName">{{ userInfo.name }}</div>
-          <van-button
-            class="editBtn"
-            size="small"
-            round
-            to="user/profile"
-          >编辑资料</van-button>
+          <van-button class="editBtn" size="small" round to="user/profile"
+            >编辑资料</van-button
+          >
         </van-cell>
       </van-cell-group>
 
@@ -49,13 +46,18 @@
     <!-- 未登录状态上方展示 -->
     <div class="userInfo" v-else>
       <!-- 告诉自己是从哪里来的 方便路由跳转 -->
-      <div class="OutuserImgBox" @click="$router.push({
-        name: 'login',
-        query: {
-          redirect: '/my'
-        }
-      })">
-        <img class="OutuserImg" src="./images/头像.png">
+      <div
+        class="OutuserImgBox"
+        @click="
+          $router.push({
+            name: 'login',
+            query: {
+              redirect: '/my',
+            },
+          })
+        "
+      >
+        <img class="OutuserImg" src="./images/头像.png" />
       </div>
       <div class="onLoginTitle">登录 / 注册</div>
     </div>
@@ -69,19 +71,9 @@
 
     <!-- 单元格 -->
     <!-- 消息通知 -->
-    <van-cell class="bottomCell"
-      title="消息通知"
-      is-link
-      v-if="user"
-    />
+    <van-cell class="bottomCell" title="消息通知" is-link v-if="user" />
     <!-- 小智同学 -->
-    <van-cell
-      class="bottomCell
-      md-4"
-      title="小智同学"
-      is-link
-      to="userChat"
-    />
+    <van-cell class="bottomCell md-4" title="小智同学" is-link to="userChat" />
     <!--
       退出登录
       v-if="user" 通过登录状态来判断
@@ -135,10 +127,10 @@ export default {
           // 本地存储也由 mutations 清空
           this.$store.commit('setUser', null)
         })
-        // 取消执行这里
-        // .catch(() => {
-        //   // on cancel
-        // })
+      // 取消执行这里
+      // .catch(() => {
+      //   // on cancel
+      // })
     },
     // 获取用户自己的信息
     // async loadgetUserInfo () {
@@ -166,7 +158,7 @@ export default {
 }
 // 资料卡
 .userInfo {
-  background-image: url('./images/banner.png');
+  background-image: url("./images/banner.png");
   background-repeat: no-repeat;
   height: 180px;
   // 去掉上面头像昵称宫格的背景色
@@ -194,7 +186,7 @@ export default {
   .userName {
     color: #fff;
     font-size: 14px;
-    padding-left: 11px ;
+    padding-left: 11px;
   }
   // 保存按钮
   .editBtn {
@@ -210,7 +202,7 @@ export default {
   .number {
     font-size: 13px;
   }
-  .numberText  {
+  .numberText {
     font-size: 12px;
   }
   // 未登录状态展示的样式-------
@@ -254,7 +246,7 @@ export default {
   height: 50px;
 }
 // 退出登录
-.ignOut{
+.ignOut {
   color: #d86262;
   text-align: center;
 }

@@ -16,10 +16,7 @@
     </form>
 
     <!-- 2.搜索结果 -->
-    <SearchResult
-      v-if="isResultShow"
-      :searchText="searchText"
-    />
+    <SearchResult v-if="isResultShow" :searchText="searchText" />
 
     <!-- 3.搜索联想建议  -->
     <!-- 如果文本框里有内容就展示 -->
@@ -36,7 +33,6 @@
       @search="onSearch"
       @AllDelete="searchHistories = []"
     />
-
   </div>
 </template>
 

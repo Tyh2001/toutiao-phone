@@ -2,11 +2,7 @@
   <div id="UpdateePhoto">
     <!-- 修改头像组件 -->
     <div class="photoBox">
-      <img
-        class="photoImg"
-        :src="images"
-        ref="photoImage"
-      >
+      <img class="photoImg" :src="images" ref="photoImage" />
     </div>
 
     <!-- 底部导航栏 -->

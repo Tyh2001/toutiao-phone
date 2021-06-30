@@ -1,30 +1,18 @@
 <template>
   <div id="CommentReply">
     <!-- 评论回复组件 -->
-    <van-nav-bar
-      :title="`${ comment.reply_count } 条回复`"
-      class="vanNavBar"
-    >
+    <van-nav-bar :title="`${comment.reply_count} 条回复`" class="vanNavBar">
       <div slot="left">
-        <van-icon
-          name="arrow-left"
-          @click="$emit('close')"
-        />
+        <van-icon name="arrow-left" @click="$emit('close')" />
       </div>
     </van-nav-bar>
 
     <!-- 评论内容 -->
-    <CommentItem
-      :comment="comment"
-    />
+    <CommentItem :comment="comment" />
 
     <p class="allComment">全部评论</p>
 
-    <CommentList
-      :source="comment.com_id"
-      type="c"
-      :list="commentList"
-    />
+    <CommentList :source="comment.com_id" type="c" :list="commentList" />
 
     <!-- 底部区域 -->
     <div class="bottomBox">
@@ -35,7 +23,8 @@
         class="commentBtn"
         round
         @click="commentShow = true"
-      >写评论</van-button>
+        >写评论</van-button
+      >
     </div>
 
     <!-- 评论弹出层 -->

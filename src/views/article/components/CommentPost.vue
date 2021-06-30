@@ -9,10 +9,7 @@
       maxlength="50"
       show-word-limit
     />
-    <div
-      class="releaseBtn"
-      @click="onPost"
-    >发布</div>
+    <div class="releaseBtn" @click="onPost">发布</div>
   </div>
 </template>
 

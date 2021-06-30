@@ -2,14 +2,9 @@
   <div id="articleIndex">
     <!-- 文章详情页面 -->
     <!-- 导航菜单 -->
-    <van-nav-bar
-      title="文章详情"
-      left-arrow
-      @click-left="$router.back()"
-    />
+    <van-nav-bar title="文章详情" left-arrow @click-left="$router.back()" />
     <!-- 文章内容 -->
     <div class="ArticleContent">
-
       <!-- 标题 -->
       <h1 class="title">{{ article.title }}</h1>
 
@@ -18,13 +13,10 @@
         <!-- 用户昵称 -->
         <div slot="title" class="userName">{{ article.aut_name }}</div>
         <!-- 发布日期 -->
-        <div slot="label" class="label">{{ article.pubdate | relativeTime }}</div>
-        <van-image
-          round
-          slot="icon"
-          class="userImg"
-          :src="article.aut_photo"
-        />
+        <div slot="label" class="label">
+          {{ article.pubdate | relativeTime }}
+        </div>
+        <van-image round slot="icon" class="userImg" :src="article.aut_photo" />
         <!-- 关注 / 取消关注按钮 -->
         <van-button
           class="followBtn"
@@ -34,7 +26,8 @@
           round
           @click="onFollow"
           :loading="BtnLoading"
-        >{{ article.is_followed ? '已关注' : '关注' }}</van-button>
+          >{{ article.is_followed ? "已关注" : "关注" }}</van-button
+        >
       </van-cell>
 
       <!-- 文章内容 -->
@@ -63,17 +56,14 @@
         class="commentBtn"
         round
         @click="commentShow = true"
-      >写评论</van-button>
+        >写评论</van-button
+      >
 
       <!-- 评论 -->
-      <van-icon
-        class-prefix="toutiao"
-        name="pinglun"
-        :badge="totalCountItem"
-      />
+      <van-icon class-prefix="toutiao" name="pinglun" :badge="totalCountItem" />
 
       <!-- 点赞 -->
-       <van-icon
+      <van-icon
         :name="article.attitude === 1 ? 'good-job' : 'good-job-o'"
         :color="article.attitude === 1 ? 'orange' : ''"
         @click="onAttitude"
@@ -92,10 +82,7 @@
 
     <!-- 评论框弹出层 -->
     <van-popup v-model="commentShow" position="bottom">
-      <CommentPost
-        :target="articleId"
-        @post-success="onPostSuccess"
-      />
+      <CommentPost :target="articleId" @post-success="onPostSuccess" />
     </van-popup>
 
     <!-- 评论回复弹出层 -->

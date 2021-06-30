@@ -2,11 +2,7 @@
   <div id="userIndex">
     <!-- 个人信息 编辑资料页面 -->
     <!-- 顶部导航栏 -->
-    <van-nav-bar
-      title="个人信息"
-      left-arrow
-      @click-left="$router.back()"
-    />
+    <van-nav-bar title="个人信息" left-arrow @click-left="$router.back()" />
 
     <!-- 单元格列表 -->
     <van-cell-group>
@@ -17,7 +13,7 @@
         accept="image/*"
         @change="onFileChange"
         hidden
-      >
+      />
       <van-cell
         title="头像"
         value="内容"
@@ -26,12 +22,7 @@
         @click="$refs.photoFile.click()"
       >
         <div>
-          <van-image
-            width="30"
-            height="30"
-            round
-            :src="userInfo.photo"
-          />
+          <van-image width="30" height="30" round :src="userInfo.photo" />
         </div>
       </van-cell>
       <!-- 昵称 -->
@@ -44,7 +35,7 @@
       <!-- 性别 -->
       <van-cell
         title="性别"
-        :value="userInfo.gender === 0 ? '男' : '女' "
+        :value="userInfo.gender === 0 ? '男' : '女'"
         is-link
         @click="genderShow = true"
       />
@@ -73,7 +64,7 @@
         v-model 本质还是组件通信 就是简化了一段代码
         **组件上 v-model 只能使用一次**
       -->
-       <UpdateName
+      <UpdateName
         v-model="userInfo.name"
         @usrNameShow="usrNameShow = false"
         v-if="usrNameShow"
@@ -87,10 +78,7 @@
     </van-popup>
 
     <!-- 修改性别弹出层 -->
-    <van-popup
-      v-model="genderShow"
-      position="bottom"
-    >
+    <van-popup v-model="genderShow" position="bottom">
       <!-- 修改性别组件 -->
       <UpdateGender
         @genderShow="genderShow = false"
@@ -101,10 +89,7 @@
     </van-popup>
 
     <!-- 修改性别弹出层 -->
-    <van-popup
-      v-model="birthdayShowShow"
-      position="bottom"
-    >
+    <van-popup v-model="birthdayShowShow" position="bottom">
       <!-- 修改生日组件 -->
       <UpdateBirthday
         v-if="birthdayShowShow"
@@ -207,7 +192,7 @@ export default {
   }
   .van-nav-bar__left,
   .van-nav-bar__right {
-    color: #1988FA;
+    color: #1988fa;
   }
 }
 </style>

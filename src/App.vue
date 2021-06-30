@@ -10,7 +10,7 @@
       这是一个数组 里面放需要缓存组件的名字
     -->
     <keep-alive :include="cachePages">
-      <router-view/>
+      <router-view />
     </keep-alive>
   </div>
 </template>

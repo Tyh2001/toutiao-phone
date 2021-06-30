@@ -10,12 +10,14 @@
         :to="{
           name: 'article',
           params: {
-            articleId: article.art_id
-          }
+            articleId: article.art_id,
+          },
         }"
       >
         <!-- 标题 -->
-        <div slot="title" class="title van-multi-ellipsis--l2">{{ article.title }}</div>
+        <div slot="title" class="title van-multi-ellipsis--l2">
+          {{ article.title }}
+        </div>
 
         <div slot="label">
           <!-- 三张图片 -->

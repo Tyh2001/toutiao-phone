@@ -8,7 +8,7 @@
       那么以后点击的所有文章的内容都和第一次点击的内容的一样的了
     -->
     <keep-alive>
-      <router-view/>
+      <router-view />
     </keep-alive>
 
     <!-- 底部导航栏 -->

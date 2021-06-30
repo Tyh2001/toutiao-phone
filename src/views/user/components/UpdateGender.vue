@@ -56,6 +56,6 @@ export default {
 <style lang="less" scoped>
 /deep/ .van-picker__cancel,
 /deep/ .van-picker__confirm {
-  color: #1988FA !important;
+  color: #1988fa !important;
 }
 </style>

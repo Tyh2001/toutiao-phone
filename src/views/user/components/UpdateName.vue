@@ -2,10 +2,7 @@
   <div>
     <!-- 更改个人信息组件 -->
     <!-- 顶部导航栏 -->
-    <van-nav-bar
-      title="昵称"
-      class="vanNavBar"
-    >
+    <van-nav-bar title="昵称" class="vanNavBar">
       <div slot="left" @click="$emit('usrNameShow')">取消</div>
       <div slot="right" @click="completeUserName">完成</div>
     </van-nav-bar>
